@@ -82,15 +82,13 @@ class TwoLayerMLP(object):
     if self.activation is 'relu':
         hidden = np.maximum(0, z1)        
     elif self.activation is 'softplus':
-        #
         # TODO please implement
-        #
+        raise NotImplementedError('put your own code here!')
     elif self.activation is 'sigmoid':
-        #
         # TODO please implement
-        #
+        raise NotImplementedError('put your own code here!')
     else:
-        raise('unknown activation type')
+        raise ValueError('Unknown activation type')
         
     scores = np.dot(hidden, W2) + b2  # 2nd layer activation, N*C
     ###########################################################################
@@ -118,38 +116,35 @@ class TwoLayerMLP(object):
     # Backward pass: compute gradients
     grads = {}
     ###########################################################################
-    # TODO: Fill in the blanks. 
+    # TODO: Fill in the blanks, replace the `None`s with your implementation.
+    #
     # Compute the backward pass, computing the derivatives of the weights
     # and biases. Store the results in the grads dictionary. For example,
     # grads['W1'] should store the gradient on W1, and be a matrix of same size
     ###########################################################################
 
     # output layer
-    # TODO please implement
-    dscore = ?  # partial derivative of loss wrt. the logits (dL/dz)
-    dW2 = ?
-    db2 = ?
+    dscore = None  # partial derivative of loss wrt. the logits (dL/dz)
+    dW2 = None     # partial derivative of loss wrt. W2
+    db2 = None     # and so on...
 
     # hidden layer
-    dhidden = ?  # TODO please implement
+    dhidden = None 
     if self.activation is 'relu':
         dz1 = dhidden
         dz1[hidden <= 0] = 0
     elif self.activation is 'softplus':
-        #
         # TODO please implement
-        #
+        raise NotImplementedError('put your own code here!')
     elif self.activation is 'sigmoid':
-        #
         # TODO please implement
-        #
+        raise NotImplementedError('put your own code here!')
     else:
-        raise('unknown activation type')
+        raise ValueError('Unknown activation type')
 
     # first layer
-    # TODO please implement
-    dW1 = ?
-    db1 = ?
+    dW1 = None
+    db1 = None 
 
     grads['W2'] = dW2
     grads['b2'] = db2
@@ -258,7 +253,7 @@ class TwoLayerMLP(object):
     ###########################################################################
     # TODO: Implement this function; it should be VERY simple!
     ###########################################################################
-    pass
+    raise NotImplementedError('put your own code here!')
     ###########################################################################
     #                              END OF YOUR CODE
     ###########################################################################
