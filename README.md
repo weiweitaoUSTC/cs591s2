@@ -4,4 +4,5 @@ Spring 2017, Boston University
 
 Instructors: Brian Kulis and Kate Saenko
 
+[Problem Set 1](https://gist.github.com/MInner/eb6330a655a5c37b82e15d1c84fd4cd0)
 [Problem Set 2](https://github.com/kunhe/cs591s2/blob/master/pset2.ipynb)
