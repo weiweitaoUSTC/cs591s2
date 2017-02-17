@@ -132,7 +132,9 @@ class TwoLayerMLP(object):
     dhidden = None 
     if self.activation is 'relu':
         dz1 = dhidden
-        dz1[hidden <= 0] = 0
+        dz1[z1 <= 0] = 0
+        # bug: thanks Ruidi Chen for pointing it out!
+        # dz1[hidden <= 0] = 0
     elif self.activation is 'softplus':
         # TODO please implement
         raise NotImplementedError('put your own code here!')
